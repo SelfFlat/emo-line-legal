@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMO LINE — документы</title>
+<style>
+  :root {
+    --cream:#f7f1ea; --card:#fbf6ec; --ink:#2c2136; --muted:#6d6178;
+    --hair:rgba(44,33,54,0.12); --amber:#fdb94a; --rose:#e13060; --indigo:#5e3ba6;
+    --chip-bg:rgba(94,59,166,0.08); --shadow:0 18px 40px -24px rgba(60,30,80,0.45);
+    --font-round:"Nunito","Quicksand","Varela Round",ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
+    --font-script:"Kaushan Script","Segoe Script",cursive;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --cream:#1b1424; --card:#271d33; --ink:#f2ecf6; --muted:#a89db5;
+      --hair:rgba(240,232,248,0.16); --chip-bg:rgba(253,185,74,0.10); --shadow:0 20px 44px -26px rgba(0,0,0,0.7); }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center;
+    background:var(--cream); color:var(--ink); font-family:var(--font-round); padding:24px; }
+  .card { background:var(--card); border:1px solid var(--hair); border-radius:20px;
+    padding:36px 40px; box-shadow:var(--shadow); max-width:440px; width:100%; }
+  .brand { display:flex; align-items:baseline; gap:8px; font-weight:800; font-size:24px; margin-bottom:6px; }
+  .brand .dot { width:12px; height:12px; border-radius:50%; align-self:center;
+    background:linear-gradient(135deg,var(--amber),var(--rose) 55%,var(--indigo)); box-shadow:0 0 0 4px var(--chip-bg); }
+  .brand .line { font-family:var(--font-script); font-weight:400; font-size:28px; color:var(--rose); }
+  p { color:var(--muted); font-size:14px; margin:0 0 22px; font-family:system-ui,sans-serif; }
+  a.link { display:flex; align-items:center; justify-content:space-between;
+    text-decoration:none; color:var(--ink); font-weight:700; font-size:16px;
+    padding:14px 18px; border:1px solid var(--hair); border-radius:14px; }
+  a.link:hover { border-color:var(--rose); }
+  a.link .arw { color:var(--rose); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand"><span class="dot"></span>emo&nbsp;<span class="line">line</span></div>
+    <p>Публичные документы приложения</p>
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <a class="link" href="./privacy/">Политика конфиденциальности <span class="arw">→</span></a>
+      <a class="link" href="./terms/">Условия использования <span class="arw">→</span></a>
+    </div>
+  </div>
+</body>
+</html>

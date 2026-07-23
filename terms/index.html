@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Условия использования — EMO LINE</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --cream:#f7f1ea; --card:#fbf6ec; --ink:#2c2136; --muted:#6d6178;
+    --hair:rgba(44,33,54,0.12); --hair-2:rgba(44,33,54,0.07);
+    --amber:#fdb94a; --coral:#f5692b; --rose:#e13060; --magenta:#a22c9c; --indigo:#5e3ba6;
+    --chip-bg:rgba(94,59,166,0.08);
+    --shadow:0 18px 40px -24px rgba(60,30,80,0.45);
+    --font-round:"Nunito","Quicksand","Varela Round",ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
+    --font-body:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;
+    --font-script:"Kaushan Script","Segoe Script","Bradley Hand",cursive;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --cream:#1b1424; --card:#271d33; --ink:#f2ecf6; --muted:#a89db5;
+      --hair:rgba(240,232,248,0.16); --hair-2:rgba(240,232,248,0.08);
+      --chip-bg:rgba(253,185,74,0.10); --shadow:0 20px 44px -26px rgba(0,0,0,0.7); }
+  }
+  :root[data-theme="light"] { --cream:#f7f1ea; --card:#fbf6ec; --ink:#2c2136; --muted:#6d6178;
+    --hair:rgba(44,33,54,0.12); --hair-2:rgba(44,33,54,0.07); --chip-bg:rgba(94,59,166,0.08);
+    --shadow:0 18px 40px -24px rgba(60,30,80,0.45); }
+  :root[data-theme="dark"] { --cream:#1b1424; --card:#271d33; --ink:#f2ecf6; --muted:#a89db5;
+    --hair:rgba(240,232,248,0.16); --hair-2:rgba(240,232,248,0.08); --chip-bg:rgba(253,185,74,0.10);
+    --shadow:0 20px 44px -26px rgba(0,0,0,0.7); }
+
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink);
+    font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:68ch; margin:0 auto; padding: clamp(28px,6vw,64px) clamp(18px,5vw,36px) 88px; }
+
+  .brand { display:flex; align-items:baseline; gap:8px; font-family:var(--font-round);
+    font-weight:800; font-size:20px; letter-spacing:-0.01em; }
+  .brand .dot { width:11px; height:11px; border-radius:50%; align-self:center;
+    background:linear-gradient(135deg,var(--amber),var(--rose) 55%,var(--indigo));
+    box-shadow:0 0 0 4px var(--chip-bg); }
+  .brand .line { font-family:var(--font-script); font-weight:400; font-size:24px; color:var(--rose); }
+
+  h1 { font-family:var(--font-round); font-weight:800; font-size:clamp(28px,5.5vw,40px);
+    line-height:1.08; letter-spacing:-0.02em; text-wrap:balance; margin:24px 0 6px; }
+  .sub { color:var(--muted); font-size:15px; margin:0 0 26px; }
+
+  .draft { display:flex; gap:12px; align-items:flex-start;
+    background:linear-gradient(135deg,rgba(245,105,43,0.12),rgba(225,48,96,0.10));
+    border:1px solid var(--hair); border-radius:14px; padding:14px 16px; margin:0 0 30px;
+    font-size:13.5px; color:var(--ink); }
+  .draft b { font-family:var(--font-round); }
+  .draft .badge { flex:none; font-family:var(--font-round); font-weight:800; font-size:11px;
+    letter-spacing:0.08em; text-transform:uppercase; color:#fff;
+    background:linear-gradient(135deg,var(--coral),var(--rose)); padding:4px 10px; border-radius:999px; }
+
+  .meta { background:var(--card); border:1px solid var(--hair); border-radius:16px;
+    padding:16px 20px; box-shadow:var(--shadow); margin:0 0 34px; font-size:14px; }
+  .meta div { display:flex; gap:10px; padding:5px 0; }
+  .meta div:not(:last-child) { border-bottom:1px solid var(--hair-2); }
+  .meta .k { flex:none; width:180px; color:var(--muted); font-weight:700; font-family:var(--font-round); }
+
+  /* Медицинская оговорка — главный акцент */
+  .medical { border:2px solid var(--rose); border-radius:16px; padding:20px 22px; margin:0 0 34px;
+    background:linear-gradient(135deg,rgba(225,48,96,0.08),rgba(162,44,156,0.06)); }
+  .medical .lab { font-family:var(--font-round); font-weight:800; text-transform:uppercase;
+    letter-spacing:0.1em; font-size:12px; color:var(--rose); display:flex; align-items:center; gap:8px; }
+  .medical .lab::before { content:"⚕"; font-size:16px; }
+  .medical p { margin:12px 0 0; font-size:15.5px; }
+  .medical .crisis { margin-top:14px; padding-top:14px; border-top:1px solid var(--hair);
+    font-weight:700; font-family:var(--font-round); }
+
+  h2 { font-family:var(--font-round); font-weight:800; font-size:20px; letter-spacing:-0.01em;
+    margin:40px 0 4px; padding-top:8px; }
+  h2 .n { color:var(--rose); font-variant-numeric:tabular-nums; margin-right:8px; }
+  p, li { font-size:15.5px; }
+  a { color:var(--indigo); text-underline-offset:2px; }
+  @media (prefers-color-scheme: dark) { a { color:var(--amber); } }
+  :root[data-theme="dark"] a { color:var(--amber); }
+
+  .ph { font-family:var(--font-round); font-weight:700; font-size:0.92em;
+    background:var(--chip-bg); border:1px dashed var(--hair); border-radius:6px;
+    padding:0 6px; color:var(--muted); }
+
+  /* Бейдж «обновить при синхронизации» */
+  .sync { display:inline-block; font-family:var(--font-round); font-weight:800; font-size:10.5px;
+    letter-spacing:0.04em; text-transform:uppercase; color:var(--indigo);
+    background:rgba(94,59,166,0.12); border:1px solid rgba(94,59,166,0.28);
+    padding:1px 8px; border-radius:999px; margin-left:6px; vertical-align:1.5px; white-space:nowrap; }
+  .sync::before { content:"⟳ "; }
+  @media (prefers-color-scheme: dark) { .sync { color:var(--amber); background:rgba(253,185,74,0.14); border-color:rgba(253,185,74,0.32); } }
+  :root[data-theme="dark"] .sync { color:var(--amber); background:rgba(253,185,74,0.14); border-color:rgba(253,185,74,0.32); }
+
+  hr { border:none; border-top:1px solid var(--hair); margin:38px 0; }
+  footer { margin-top:44px; color:var(--muted); font-size:12.5px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand"><span class="dot"></span>emo&nbsp;<span class="line">line</span></div>
+
+  <h1>Условия использования</h1>
+  <p class="sub">Мобильное приложение EMO LINE — дневник эмоций</p>
+
+  <div class="draft">
+    <span class="badge">Черновик</span>
+    <div><b>Не для публикации в текущем виде.</b> Поля <span class="ph">[скобки]</span> нужно заполнить, текст — вычитать юристом. Пункты с бейджем <span class="sync">обновить при синхронизации</span> завязаны на локальное хранение и должны быть пересмотрены при появлении облачной синхронизации и авторизации. Это не юридическая консультация.</div>
+  </div>
+
+  <div class="meta">
+    <div><span class="k">Дата вступления в силу</span><span class="ph">[ДД.ММ.ГГГГ]</span></div>
+    <div><span class="k">Последнее обновление</span><span class="ph">[ДД.ММ.ГГГГ]</span></div>
+    <div><span class="k">Оператор</span><span class="ph">[ФИО / название ИП или юрлица]</span></div>
+    <div><span class="k">Контакт</span><span class="ph">[email]</span></div>
+  </div>
+
+  <p>Настоящие Условия использования (далее — «Условия») регулируют использование мобильного приложения <b>EMO LINE</b> (далее — «Приложение»). Устанавливая и используя Приложение, вы принимаете настоящие Условия. Если вы с ними не согласны — не используйте Приложение.</p>
+
+  <!-- ГЛАВНЫЙ АКЦЕНТ: медицинская оговорка -->
+  <div class="medical">
+    <div class="lab">Важно — медицинская оговорка</div>
+    <p><b>EMO LINE — инструмент для самонаблюдения и ведения личного дневника эмоций. Приложение не является медицинским изделием, не предназначено для диагностики, лечения или профилактики каких-либо заболеваний и не заменяет консультацию, диагностику или лечение у квалифицированного специалиста.</b></p>
+    <p>Записи, оценки настроения, графики и любые сведения в Приложении носят исключительно информационный и вспомогательный характер. Не принимайте медицинских решений — в том числе о приёме, изменении или отмене лекарств — полагаясь на данные Приложения. Все такие решения принимайте совместно с вашим лечащим врачом.</p>
+    <p class="crisis">Если вы переживаете кризис или у вас возникают мысли о причинении себе вреда — немедленно обратитесь за профессиональной помощью или в службу экстренной помощи. <span class="ph">[Указать телефон(ы) горячей линии психологической помощи для целевых стран.]</span></p>
+  </div>
+
+  <h2><span class="n">1</span>Назначение Приложения</h2>
+  <p>Приложение позволяет создавать личные заметки об эмоциональном состоянии, присваивать им оценку настроения и просматривать динамику во времени. Приложение предназначено для лиц не моложе <span class="ph">[13/16 — уточнить]</span> лет.</p>
+
+  <h2><span class="n">2</span>Хранение данных и ответственность за их сохранность <span class="sync">обновить при синхронизации</span></h2>
+  <p>Ваши записи, оценки, эмоции и вложения хранятся <b>только на вашем устройстве</b>. Приложение не создаёт их резервных копий на наших серверах и не синхронизирует их между устройствами.</p>
+  <p><b>Вы самостоятельно несёте ответственность за сохранность своих данных.</b> При потере, поломке, замене или сбросе устройства, удалении Приложения или очистке его данных записи <b>не подлежат восстановлению</b>. Для страховки используйте функцию экспорта/резервной копии и храните полученный файл в безопасном месте. Оператор не несёт ответственности за утрату данных, находящихся на вашем устройстве.</p>
+
+  <h2><span class="n">3</span>Отказ от гарантий</h2>
+  <p>Приложение предоставляется на условиях «как есть» (as is) и «как доступно» (as available), без каких-либо явных или подразумеваемых гарантий, включая гарантии пригодности для конкретной цели, бесперебойной и безошибочной работы, точности или полноты данных, а также аналитических выводов.</p>
+
+  <h2><span class="n">4</span>Ограничение ответственности</h2>
+  <p>В максимально допустимой применимым правом степени Оператор не несёт ответственности за любой прямой или косвенный ущерб, возникший в связи с использованием или невозможностью использования Приложения, включая утрату данных, упущенную выгоду и последствия решений, принятых на основании сведений из Приложения. <span class="ph">[При необходимости — предельный размер ответственности согласно юрисдикции.]</span></p>
+
+  <h2><span class="n">5</span>Правила использования</h2>
+  <p>Вы обязуетесь использовать Приложение в личных некоммерческих целях и в соответствии с законом. Запрещается вмешиваться в работу Приложения, декомпилировать, модифицировать или распространять его в нарушение прав Оператора и третьих лиц.</p>
+
+  <h2><span class="n">6</span>Аккаунт и доступ <span class="sync">обновить при синхронизации</span></h2>
+  <p>На текущий момент Приложение работает без регистрации и учётной записи; вход по аккаунту не предусмотрен. <span class="ph">[Обновить при добавлении авторизации и облачной синхронизации: правила регистрации, ответственность за сохранность учётных данных, порядок удаления аккаунта и данных.]</span></p>
+
+  <h2><span class="n">7</span>Интеллектуальная собственность</h2>
+  <p>Приложение, его дизайн, логотип «emo line», графика и программный код принадлежат Оператору и охраняются законом. Настоящие Условия не передают вам каких-либо прав на них, кроме права использовать Приложение по назначению.</p>
+
+  <h2><span class="n">8</span>Сторонние сервисы</h2>
+  <p>Приложение использует сервисы Google/Firebase (аналитика, доставка уведомлений). Обработка данных этими сервисами описана в нашей <a href="../privacy/">Политике конфиденциальности</a> и в политике Google. Оператор не отвечает за работу сторонних сервисов.</p>
+
+  <h2><span class="n">9</span>Изменения Условий</h2>
+  <p>Оператор вправе изменять настоящие Условия. Актуальная редакция размещается по этому адресу с указанием даты обновления. Продолжение использования Приложения после изменений означает согласие с ними.</p>
+
+  <h2><span class="n">10</span>Применимое право</h2>
+  <p>К настоящим Условиям применяется право <span class="ph">[указать юрисдикцию]</span>. Споры разрешаются в порядке, предусмотренном применимым правом.</p>
+
+  <h2><span class="n">11</span>Контакты</h2>
+  <p>По вопросам, связанным с настоящими Условиями: <span class="ph">[email]</span>.</p>
+
+  <hr>
+  <footer>EMO LINE · черновик условий использования · версионируется в репозитории проекта</footer>
+</div>
+</body>
+</html>

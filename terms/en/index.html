@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use — EMO LINE</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --cream:#f7f1ea; --card:#fbf6ec; --ink:#2c2136; --muted:#6d6178;
+    --hair:rgba(44,33,54,0.12); --hair-2:rgba(44,33,54,0.07);
+    --amber:#fdb94a; --coral:#f5692b; --rose:#e13060; --magenta:#a22c9c; --indigo:#5e3ba6;
+    --chip-bg:rgba(94,59,166,0.08);
+    --shadow:0 18px 40px -24px rgba(60,30,80,0.45);
+    --font-round:"Nunito","Quicksand","Varela Round",ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif;
+    --font-body:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;
+    --font-script:"Kaushan Script","Segoe Script","Bradley Hand",cursive;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --cream:#1b1424; --card:#271d33; --ink:#f2ecf6; --muted:#a89db5;
+      --hair:rgba(240,232,248,0.16); --hair-2:rgba(240,232,248,0.08);
+      --chip-bg:rgba(253,185,74,0.10); --shadow:0 20px 44px -26px rgba(0,0,0,0.7); }
+  }
+  :root[data-theme="light"] { --cream:#f7f1ea; --card:#fbf6ec; --ink:#2c2136; --muted:#6d6178;
+    --hair:rgba(44,33,54,0.12); --hair-2:rgba(44,33,54,0.07); --chip-bg:rgba(94,59,166,0.08);
+    --shadow:0 18px 40px -24px rgba(60,30,80,0.45); }
+  :root[data-theme="dark"] { --cream:#1b1424; --card:#271d33; --ink:#f2ecf6; --muted:#a89db5;
+    --hair:rgba(240,232,248,0.16); --hair-2:rgba(240,232,248,0.08); --chip-bg:rgba(253,185,74,0.10);
+    --shadow:0 20px 44px -26px rgba(0,0,0,0.7); }
+
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink);
+    font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:68ch; margin:0 auto; padding: clamp(28px,6vw,64px) clamp(18px,5vw,36px) 88px; }
+
+  .brand { display:flex; align-items:baseline; gap:8px; font-family:var(--font-round);
+    font-weight:800; font-size:20px; letter-spacing:-0.01em; }
+  .brand .dot { width:11px; height:11px; border-radius:50%; align-self:center;
+    background:linear-gradient(135deg,var(--amber),var(--rose) 55%,var(--indigo));
+    box-shadow:0 0 0 4px var(--chip-bg); }
+  .brand .line { font-family:var(--font-script); font-weight:400; font-size:24px; color:var(--rose); }
+
+  h1 { font-family:var(--font-round); font-weight:800; font-size:clamp(28px,5.5vw,40px);
+    line-height:1.08; letter-spacing:-0.02em; text-wrap:balance; margin:24px 0 6px; }
+  .sub { color:var(--muted); font-size:15px; margin:0 0 14px; }
+  .langbar { display:flex; gap:8px; margin:0 0 26px; }
+  .langbar a, .langbar .cur { font-family:var(--font-round); font-weight:800; font-size:12px;
+    letter-spacing:0.06em; padding:4px 13px; border-radius:999px; text-decoration:none; }
+  .langbar .cur { background:var(--chip-bg); color:var(--ink); }
+  .langbar a { color:var(--muted); border:1px solid var(--hair); }
+  .langbar a:hover { border-color:var(--rose); color:var(--ink); }
+
+  .draft { display:flex; gap:12px; align-items:flex-start;
+    background:linear-gradient(135deg,rgba(245,105,43,0.12),rgba(225,48,96,0.10));
+    border:1px solid var(--hair); border-radius:14px; padding:14px 16px; margin:0 0 30px;
+    font-size:13.5px; color:var(--ink); }
+  .draft b { font-family:var(--font-round); }
+  .draft .badge { flex:none; font-family:var(--font-round); font-weight:800; font-size:11px;
+    letter-spacing:0.08em; text-transform:uppercase; color:#fff;
+    background:linear-gradient(135deg,var(--coral),var(--rose)); padding:4px 10px; border-radius:999px; }
+
+  .meta { background:var(--card); border:1px solid var(--hair); border-radius:16px;
+    padding:16px 20px; box-shadow:var(--shadow); margin:0 0 34px; font-size:14px; }
+  .meta div { display:flex; gap:10px; padding:5px 0; }
+  .meta div:not(:last-child) { border-bottom:1px solid var(--hair-2); }
+  .meta .k { flex:none; width:180px; color:var(--muted); font-weight:700; font-family:var(--font-round); }
+
+  .medical { border:2px solid var(--rose); border-radius:16px; padding:20px 22px; margin:0 0 34px;
+    background:linear-gradient(135deg,rgba(225,48,96,0.08),rgba(162,44,156,0.06)); }
+  .medical .lab { font-family:var(--font-round); font-weight:800; text-transform:uppercase;
+    letter-spacing:0.1em; font-size:12px; color:var(--rose); display:flex; align-items:center; gap:8px; }
+  .medical .lab::before { content:"⚕"; font-size:16px; }
+  .medical p { margin:12px 0 0; font-size:15.5px; }
+  .medical .crisis { margin-top:14px; padding-top:14px; border-top:1px solid var(--hair);
+    font-weight:700; font-family:var(--font-round); }
+
+  h2 { font-family:var(--font-round); font-weight:800; font-size:20px; letter-spacing:-0.01em;
+    margin:40px 0 4px; padding-top:8px; }
+  h2 .n { color:var(--rose); font-variant-numeric:tabular-nums; margin-right:8px; }
+  p, li { font-size:15.5px; }
+  a { color:var(--indigo); text-underline-offset:2px; }
+  @media (prefers-color-scheme: dark) { a { color:var(--amber); } }
+  :root[data-theme="dark"] a { color:var(--amber); }
+
+  .ph { font-family:var(--font-round); font-weight:700; font-size:0.92em;
+    background:var(--chip-bg); border:1px dashed var(--hair); border-radius:6px;
+    padding:0 6px; color:var(--muted); }
+
+  .sync { display:inline-block; font-family:var(--font-round); font-weight:800; font-size:10.5px;
+    letter-spacing:0.04em; text-transform:uppercase; color:var(--indigo);
+    background:rgba(94,59,166,0.12); border:1px solid rgba(94,59,166,0.28);
+    padding:1px 8px; border-radius:999px; margin-left:6px; vertical-align:1.5px; white-space:nowrap; }
+  .sync::before { content:"⟳ "; }
+  @media (prefers-color-scheme: dark) { .sync { color:var(--amber); background:rgba(253,185,74,0.14); border-color:rgba(253,185,74,0.32); } }
+  :root[data-theme="dark"] .sync { color:var(--amber); background:rgba(253,185,74,0.14); border-color:rgba(253,185,74,0.32); }
+
+  hr { border:none; border-top:1px solid var(--hair); margin:38px 0; }
+  footer { margin-top:44px; color:var(--muted); font-size:12.5px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand"><span class="dot"></span>emo&nbsp;<span class="line">line</span></div>
+
+  <h1>Terms of Use</h1>
+  <p class="sub">EMO LINE mobile application — an emotion diary</p>
+  <div class="langbar"><a href="../">RU</a><span class="cur">EN</span></div>
+
+  <div class="draft">
+    <span class="badge">Draft</span>
+    <div><b>Not for publication as is.</b> Fields in <span class="ph">[brackets]</span> must be filled and the text reviewed by a lawyer. Clauses marked <span class="sync">update when sync ships</span> depend on local storage and must be revised once cloud sync and sign-in are introduced. This is not legal advice.</div>
+  </div>
+
+  <div class="meta">
+    <div><span class="k">Effective date</span><span class="ph">[DD.MM.YYYY]</span></div>
+    <div><span class="k">Last updated</span><span class="ph">[DD.MM.YYYY]</span></div>
+    <div><span class="k">Operator</span><span class="ph">[full legal name of the individual or company]</span></div>
+    <div><span class="k">Contact</span><span class="ph">[email]</span></div>
+  </div>
+
+  <p>These Terms of Use (the “Terms”) govern the use of the <b>EMO LINE</b> mobile application (the “App”). By installing and using the App, you accept these Terms. If you do not agree with them, do not use the App.</p>
+
+  <div class="medical">
+    <div class="lab">Important — medical disclaimer</div>
+    <p><b>EMO LINE is a tool for self-observation and keeping a personal emotion diary. The App is not a medical device, is not intended to diagnose, treat or prevent any disease, and does not replace consultation, diagnosis or treatment by a qualified professional.</b></p>
+    <p>Records, mood ratings, charts and any information in the App are purely informational and supportive in nature. Do not make medical decisions — including about taking, changing or stopping medication — in reliance on data from the App. Make all such decisions together with your treating physician.</p>
+    <p class="crisis">If you are experiencing a crisis or having thoughts of harming yourself, seek professional help or emergency services immediately. <span class="ph">[Provide the phone number(s) of a mental-health crisis line for your target countries.]</span></p>
+  </div>
+
+  <h2><span class="n">1</span>Purpose of the App</h2>
+  <p>The App lets you create personal notes about your emotional state, assign a mood rating to them, and view your dynamics over time. The App is intended for persons aged <span class="ph">[13/16 — clarify]</span> and older.</p>
+
+  <h2><span class="n">2</span>Data storage and responsibility for its safekeeping <span class="sync">update when sync ships</span></h2>
+  <p>Your records, ratings, emotions and attachments are stored <b>only on your device</b>. The App does not create backups of them on our servers and does not sync them across devices.</p>
+  <p><b>You are solely responsible for the safekeeping of your data.</b> If the device is lost, damaged, replaced or reset, or the App is uninstalled or its data cleared, the records <b>cannot be recovered</b>. As a safeguard, use the export/backup feature and keep the resulting file in a safe place. The operator is not liable for the loss of data residing on your device.</p>
+
+  <h2><span class="n">3</span>Disclaimer of warranties</h2>
+  <p>The App is provided “as is” and “as available”, without any express or implied warranties, including warranties of fitness for a particular purpose, uninterrupted and error-free operation, accuracy or completeness of data, or of analytical conclusions.</p>
+
+  <h2><span class="n">4</span>Limitation of liability</h2>
+  <p>To the maximum extent permitted by applicable law, the operator shall not be liable for any direct or indirect damages arising in connection with the use of, or inability to use, the App, including loss of data, lost profits, and the consequences of decisions made on the basis of information from the App. <span class="ph">[If required — the liability cap under the applicable jurisdiction.]</span></p>
+
+  <h2><span class="n">5</span>Acceptable use</h2>
+  <p>You agree to use the App for personal, non-commercial purposes and in accordance with the law. You must not interfere with the operation of the App, decompile, modify, or distribute it in violation of the rights of the operator or third parties.</p>
+
+  <h2><span class="n">6</span>Account and access <span class="sync">update when sync ships</span></h2>
+  <p>At present the App works without registration or an account; account sign-in is not provided. <span class="ph">[Update when sign-in and cloud sync are added: registration rules, responsibility for safeguarding credentials, and the procedure for deleting an account and its data.]</span></p>
+
+  <h2><span class="n">7</span>Intellectual property</h2>
+  <p>The App, its design, the “emo line” logo, graphics and source code belong to the operator and are protected by law. These Terms do not transfer to you any rights therein, other than the right to use the App for its intended purpose.</p>
+
+  <h2><span class="n">8</span>Third-party services</h2>
+  <p>The App uses Google/Firebase services (analytics, notification delivery). The processing of data by these services is described in our <a href="../../privacy/en/">Privacy Policy</a> and in Google's policy. The operator is not responsible for the operation of third-party services.</p>
+
+  <h2><span class="n">9</span>Changes to the Terms</h2>
+  <p>The operator may amend these Terms. The current version is published at this address with an update date. Continued use of the App after changes constitutes acceptance of them.</p>
+
+  <h2><span class="n">10</span>Governing law</h2>
+  <p>These Terms are governed by the law of <span class="ph">[state the jurisdiction]</span>. Disputes are resolved in the manner prescribed by the applicable law.</p>
+
+  <h2><span class="n">11</span>Contact</h2>
+  <p>For questions regarding these Terms: <span class="ph">[email]</span>.</p>
+
+  <hr>
+  <footer>EMO LINE · draft terms of use · versioned in the project repository</footer>
+</div>
+</body>
+</html>

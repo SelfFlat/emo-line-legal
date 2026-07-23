@@ -42,7 +42,13 @@
 
   h1 { font-family:var(--font-round); font-weight:800; font-size:clamp(28px,5.5vw,40px);
     line-height:1.08; letter-spacing:-0.02em; text-wrap:balance; margin:24px 0 6px; }
-  .sub { color:var(--muted); font-size:15px; margin:0 0 26px; }
+  .sub { color:var(--muted); font-size:15px; margin:0 0 14px; }
+  .langbar { display:flex; gap:8px; margin:0 0 26px; }
+  .langbar a, .langbar .cur { font-family:var(--font-round); font-weight:800; font-size:12px;
+    letter-spacing:0.06em; padding:4px 13px; border-radius:999px; text-decoration:none; }
+  .langbar .cur { background:var(--chip-bg); color:var(--ink); }
+  .langbar a { color:var(--muted); border:1px solid var(--hair); }
+  .langbar a:hover { border-color:var(--rose); color:var(--ink); }
 
   .draft { display:flex; gap:12px; align-items:flex-start;
     background:linear-gradient(135deg,rgba(245,105,43,0.12),rgba(225,48,96,0.10));
@@ -101,6 +107,7 @@
 
   <h1>Условия использования</h1>
   <p class="sub">Мобильное приложение EMO LINE — дневник эмоций</p>
+  <div class="langbar"><span class="cur">RU</span><a href="./en/">EN</a></div>
 
   <div class="draft">
     <span class="badge">Черновик</span>

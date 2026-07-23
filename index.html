@@ -26,20 +26,28 @@
     background:linear-gradient(135deg,var(--amber),var(--rose) 55%,var(--indigo)); box-shadow:0 0 0 4px var(--chip-bg); }
   .brand .line { font-family:var(--font-script); font-weight:400; font-size:28px; color:var(--rose); }
   p { color:var(--muted); font-size:14px; margin:0 0 22px; font-family:system-ui,sans-serif; }
-  a.link { display:flex; align-items:center; justify-content:space-between;
-    text-decoration:none; color:var(--ink); font-weight:700; font-size:16px;
+  .doc { display:flex; align-items:center; justify-content:space-between; gap:12px;
     padding:14px 18px; border:1px solid var(--hair); border-radius:14px; }
-  a.link:hover { border-color:var(--rose); }
-  a.link .arw { color:var(--rose); }
+  .doc .t { font-weight:700; font-size:15px; }
+  .doc .langs { display:flex; gap:6px; flex:none; }
+  .doc .langs a { text-decoration:none; color:var(--muted); font-weight:800; font-size:12px;
+    letter-spacing:0.05em; padding:4px 11px; border:1px solid var(--hair); border-radius:999px; }
+  .doc .langs a:hover { border-color:var(--rose); color:var(--ink); }
 </style>
 </head>
 <body>
   <div class="card">
     <div class="brand"><span class="dot"></span>emo&nbsp;<span class="line">line</span></div>
-    <p>Публичные документы приложения</p>
+    <p>Публичные документы приложения · App legal documents</p>
     <div style="display:flex; flex-direction:column; gap:12px;">
-      <a class="link" href="./privacy/">Политика конфиденциальности <span class="arw">→</span></a>
-      <a class="link" href="./terms/">Условия использования <span class="arw">→</span></a>
+      <div class="doc">
+        <span class="t">Privacy Policy · Политика конфиденциальности</span>
+        <span class="langs"><a href="./privacy/">RU</a><a href="./privacy/en/">EN</a></span>
+      </div>
+      <div class="doc">
+        <span class="t">Terms of Use · Условия использования</span>
+        <span class="langs"><a href="./terms/">RU</a><a href="./terms/en/">EN</a></span>
+      </div>
     </div>
   </div>
 </body>

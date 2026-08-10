@@ -123,7 +123,7 @@
     <ul>
       <li><b>Your notes, mood ratings, emotions and attachments are stored only on your device.</b> We do not send them to our servers, do not sync them, and have no access to them.</li>
       <li>You have <b>no account</b> with us: the App can be used without registration or sign-in.</li>
-      <li>The only data that leaves your device is <b>anonymous usage statistics</b> (Google/Firebase analytics), which <b>does not contain the text of your notes or your emotions</b>.</li>
+      <li>The only things that leave your device are: <b>anonymous usage statistics</b> (Google/Firebase analytics) and — <b>only if you choose to send feedback</b> — the text you type together with basic technical information about your device. In neither case is <b>the content of your diary transmitted</b>.</li>
     </ul>
     <p style="margin:12px 0 0">The flip side of local storage: <b>if your device is lost, damaged or reset, your records cannot be recovered</b>, because no one but you holds a copy. Use the export/backup feature as a safeguard.</p>
   </div>
@@ -131,7 +131,9 @@
   <h2><span class="n">1</span>What data is processed</h2>
 
   <h3>1.1. Diary content — on your device only</h3>
-  <p>The text of your notes, mood ratings (emoji), selected emotions and attached files (photos, audio) are stored <b>in a local database on your device</b> and are not transmitted anywhere else. We, as the operator, <b>have no access</b> to this data and do not store it on any servers.</p>
+  <p>The text of your notes, mood ratings (emoji), selected emotions (labels) and attached files are stored <b>in a local database on your device</b> and are not transmitted anywhere else. We, as the operator, <b>have no access</b> to this data and do not store it on any servers.</p>
+  <p><b>Photos.</b> Pictures taken in the App (using the Camera permission) are saved only in its private storage on the device, are <b>not added to your shared gallery</b>, and are not uploaded anywhere.</p>
+  <p>The <b>home-screen widget</b> (if you add it) displays only the emoji of your last mood rating and the time of your last entry — no text or tags. This data stays on the device, but bear in mind that your home screen may be visible to people around you.</p>
 
   <h3>1.2. Usage analytics (Google Analytics for Firebase)</h3>
   <p>The App uses <b>Google Analytics for Firebase</b> to understand how it is used (for example, number of launches, session length, stability). It collects <b>automatic, anonymized</b> data, including:</p>
@@ -149,6 +151,18 @@
   <h3>1.4. Account and sign-in</h3>
   <p>At present, account sign-in (Google, Facebook, VKontakte) is <b>not implemented</b>, and account data is not collected. <span class="ph">[Update when cloud sync and sign-in are added in future versions: what account data is processed, where synced records are stored.]</span></p>
 
+  <h3>1.5. Feedback (the “Feedback &amp; suggestions” form)</h3>
+  <p>If you <b>choose to</b> send feedback through the form in the App, it is transmitted to the <b>Cloud Firestore (Google/Firebase)</b> cloud store. The following are sent:</p>
+  <ul>
+    <li>the text of your message;</li>
+    <li>the type of request (suggestion / problem / other) — if selected;</li>
+    <li>your email address — <b>only if you provide it</b> (you may leave it blank and submit anonymously; it is used so we can reply);</li>
+    <li>the App version, OS version and device model — for diagnostics;</li>
+    <li>an <b>anonymous install identifier</b> (<code>installId</code>, a random UUID) — to link several of your submissions together; it is not tied to your identity;</li>
+    <li>a timestamp.</li>
+  </ul>
+  <p><b>The content of your diary (notes, emotions, ratings, attachments) is never included in feedback.</b> Feedback is used only to handle your request and improve the App.</p>
+
   <h2><span class="n">2</span>Purposes and legal bases</h2>
   <table>
     <thead><tr><th>Data</th><th>Purpose</th><th>Legal basis</th></tr></thead>
@@ -156,6 +170,7 @@
       <tr><td>Diary content (local)</td><td>Core function — keeping a personal emotion diary</td><td>Processed only by you, on your device</td></tr>
       <tr><td>Usage analytics</td><td>Improving the App's stability and usability</td><td>Legitimate interest / consent <span class="ph">[clarify per jurisdiction]</span></td></tr>
       <tr><td>Push token</td><td>Delivering reminders and notifications</td><td>Legitimate interest / consent</td></tr>
+      <tr><td>Feedback (feedback form)</td><td>Handling requests and improving the App</td><td>Consent — you submit feedback on your own initiative</td></tr>
     </tbody>
   </table>
 
@@ -168,16 +183,17 @@
   </ul>
 
   <h2><span class="n">4</span>Sharing data with third parties</h2>
-  <p>Anonymized analytics and (in the future) push infrastructure are processed by our cloud service provider:</p>
+  <p>We use <b>Google/Firebase</b> cloud services:</p>
   <ul>
-    <li><b>Google LLC / Firebase</b> — analytics and push notifications. This processing is governed by Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    <li><b>Google LLC / Firebase</b> — usage analytics, push-notification delivery, <b>feedback intake (Cloud Firestore)</b>, and downloading reminder-phrase configuration (Remote Config). This processing is governed by Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
   </ul>
-  <p>Analytics data may be processed on Google's servers outside your country.</p>
+  <p>This data may be processed on Google's servers outside your country.</p>
 
   <h2><span class="n">5</span>Data retention and deletion</h2>
   <ul>
     <li><b>Diary content</b> is stored on the device until you delete it (deleting an individual record, clearing the App's data, or uninstalling the App). Once deleted, it cannot be recovered.</li>
     <li><b>Export/backup</b> lets you save your data to a file at your discretion; you are responsible for storing and protecting the exported file.</li>
+    <li><b>Feedback</b> you send through the feedback form is retained by us (in Cloud Firestore) for as long as needed to handle it and improve the App. To request deletion of a submitted piece of feedback, contact us: <span class="ph">[email]</span>.</li>
     <li><b>Analytics data</b> is retained by Google for a period defined by the Firebase settings (<span class="ph">[state the retention period]</span>).</li>
   </ul>
 

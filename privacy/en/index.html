@@ -123,7 +123,7 @@
     <ul>
       <li><b>Your notes, mood ratings, emotions and attachments are stored only on your device.</b> We do not send them to our servers, do not sync them, and have no access to them.</li>
       <li>You have <b>no account</b> with us: the App can be used without registration or sign-in.</li>
-      <li>The only things that leave your device are: <b>anonymous usage statistics</b> (Google/Firebase analytics) and — <b>only if you choose to send feedback</b> — the text you type together with basic technical information about your device. In neither case is <b>the content of your diary transmitted</b>.</li>
+      <li>The only things that leave your device are: <b>anonymous usage statistics</b> (Google/Firebase analytics), <b>automatic crash reports</b> (Crashlytics) and — <b>only if you choose to send feedback</b> — the text you type together with basic technical information about your device. <b>The content of your diary is transmitted in none of these cases.</b></li>
     </ul>
     <p style="margin:12px 0 0">The flip side of local storage: <b>if your device is lost, damaged or reset, your records cannot be recovered</b>, because no one but you holds a copy. Use the export/backup feature as a safeguard.</p>
   </div>
@@ -145,13 +145,24 @@
   </ul>
   <p>This data is processed by Google. <b>The text of your notes, your emotions and mood ratings are not sent to analytics.</b></p>
 
-  <h3>1.3. Push notifications (Firebase Cloud Messaging)</h3>
+  <h3>1.3. Crash reports (Firebase Crashlytics)</h3>
+  <p>If the App crashes or hits an unhandled error, a <b>crash report</b> is generated automatically and sent to <b>Firebase Crashlytics (Google)</b>. A report contains:</p>
+  <ul>
+    <li>the <b>stack trace</b> — a technical description of where in the code the failure occurred;</li>
+    <li>the state of the device at the time of the crash (model, OS version, available memory and disk space, battery level, screen orientation, whether the device is rooted);</li>
+    <li>the App version and the time of the crash;</li>
+    <li>an <b>anonymous installation identifier</b> from Crashlytics (a random UUID) — used to tell a crash repeating on one device from one affecting many; it is not tied to your identity.</li>
+  </ul>
+  <p><b>The content of your diary is never included in crash reports.</b> The text of your notes, your emotions, mood ratings and photo file paths are written neither to the report log nor to its custom fields — this is an explicit development rule for the App.</p>
+  <p>Reports are used solely to find and fix errors. In debug builds (on developer devices) crash reporting is disabled.</p>
+
+  <h3>1.4. Push notifications (Firebase Cloud Messaging)</h3>
   <p>To deliver notifications, the device is assigned a <b>push token</b> (a technical identifier). <span class="ph">[Current state: server-side sending of notifications is not in use; the token is generated on the device and not transmitted to our servers. Reminders are scheduled locally on the device.]</span> <span class="ph">[Update once server-side sending is added: state that the token is transmitted to Google/FCM and to our server to deliver notifications.]</span></p>
 
-  <h3>1.4. Account and sign-in</h3>
+  <h3>1.5. Account and sign-in</h3>
   <p>At present, account sign-in (Google, Facebook, VKontakte) is <b>not implemented</b>, and account data is not collected. <span class="ph">[Update when cloud sync and sign-in are added in future versions: what account data is processed, where synced records are stored.]</span></p>
 
-  <h3>1.5. Feedback (the “Feedback &amp; suggestions” form)</h3>
+  <h3>1.6. Feedback (the “Feedback &amp; suggestions” form)</h3>
   <p>If you <b>choose to</b> send feedback through the form in the App, it is transmitted to the <b>Cloud Firestore (Google/Firebase)</b> cloud store. The following are sent:</p>
   <ul>
     <li>the text of your message;</li>
@@ -169,6 +180,7 @@
     <tbody>
       <tr><td>Diary content (local)</td><td>Core function — keeping a personal emotion diary</td><td>Processed only by you, on your device</td></tr>
       <tr><td>Usage analytics</td><td>Improving the App's stability and usability</td><td>Legitimate interest / consent <span class="ph">[clarify per jurisdiction]</span></td></tr>
+      <tr><td>Crash reports</td><td>Finding and fixing errors, App stability</td><td>Legitimate interest <span class="ph">[clarify per jurisdiction]</span></td></tr>
       <tr><td>Push token</td><td>Delivering reminders and notifications</td><td>Legitimate interest / consent</td></tr>
       <tr><td>Feedback (feedback form)</td><td>Handling requests and improving the App</td><td>Consent — you submit feedback on your own initiative</td></tr>
     </tbody>
@@ -185,7 +197,7 @@
   <h2><span class="n">4</span>Sharing data with third parties</h2>
   <p>We use <b>Google/Firebase</b> cloud services:</p>
   <ul>
-    <li><b>Google LLC / Firebase</b> — usage analytics, push-notification delivery, <b>feedback intake (Cloud Firestore)</b>, and downloading reminder-phrase configuration (Remote Config). This processing is governed by Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    <li><b>Google LLC / Firebase</b> — usage analytics, <b>crash reporting (Crashlytics)</b>, push-notification delivery, <b>feedback intake (Cloud Firestore)</b>, and downloading reminder-phrase configuration (Remote Config). This processing is governed by Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
   </ul>
   <p>This data may be processed on Google's servers outside your country.</p>
 
@@ -194,6 +206,7 @@
     <li><b>Diary content</b> is stored on the device until you delete it (deleting an individual record, clearing the App's data, or uninstalling the App). Once deleted, it cannot be recovered.</li>
     <li><b>Export/backup</b> lets you save your data to a file at your discretion; you are responsible for storing and protecting the exported file.</li>
     <li><b>Feedback</b> you send through the feedback form is retained by us (in Cloud Firestore) for as long as needed to handle it and improve the App. To request deletion of a submitted piece of feedback, contact us: <span class="ph">[email]</span>.</li>
+    <li><b>Crash reports</b> are retained by Google for the period set for Firebase Crashlytics (<span class="ph">[verify the current period in the Firebase settings]</span>), after which they are deleted.</li>
     <li><b>Analytics data</b> is retained by Google for a period defined by the Firebase settings (<span class="ph">[state the retention period]</span>).</li>
   </ul>
 

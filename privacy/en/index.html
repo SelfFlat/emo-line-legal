@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — EMO LINE</title>
-<meta name="robots" content="noindex">
 <style>
   :root {
     --cream:#f7f1ea; --card:#fbf6ec; --ink:#2c2136; --muted:#6d6178;
@@ -103,16 +102,12 @@
   <p class="sub">EMO LINE mobile application — an emotion diary</p>
   <div class="langbar"><a href="../">RU</a><span class="cur">EN</span></div>
 
-  <div class="draft">
-    <span class="badge">Draft</span>
-    <div><b>Not for publication as is.</b> Grounded in the app's actual behavior; fields in <span class="ph">[brackets]</span> must be filled, the text reviewed by a lawyer (sensitive topic), and kept in sync with the Russian version. This is not legal advice.</div>
-  </div>
 
   <div class="meta">
-    <div><span class="k">Effective date</span><span class="ph">[DD.MM.YYYY]</span></div>
-    <div><span class="k">Last updated</span><span class="ph">[DD.MM.YYYY]</span></div>
-    <div><span class="k">Operator</span><span class="ph">[full legal name of the individual or company]</span></div>
-    <div><span class="k">Contact</span><span class="ph">[email for data requests]</span></div>
+    <div><span class="k">Effective date</span><span>14.10.2026</span></div>
+    <div><span class="k">Last updated</span><span>14.10.2026</span></div>
+    <div><span class="k">Operator</span><span>Pavel Yurkin</span></div>
+    <div><span class="k">Contact</span><span><a href="mailto:septikusq@gmail.com">septikusq@gmail.com</a></span></div>
   </div>
 
   <p>This Privacy Policy describes what data the <b>EMO LINE</b> mobile application (the “App”) processes, for what purpose and on what legal basis.</p>
@@ -157,10 +152,10 @@
   <p>Reports are used solely to find and fix errors. In debug builds (on developer devices) crash reporting is disabled.</p>
 
   <h3>1.4. Push notifications (Firebase Cloud Messaging)</h3>
-  <p>To deliver notifications, the device is assigned a <b>push token</b> (a technical identifier). <span class="ph">[Current state: server-side sending of notifications is not in use; the token is generated on the device and not transmitted to our servers. Reminders are scheduled locally on the device.]</span> <span class="ph">[Update once server-side sending is added: state that the token is transmitted to Google/FCM and to our server to deliver notifications.]</span></p>
+  <p>To deliver notifications, the device is assigned a <b>push token</b> (a technical identifier). Server-side sending of notifications is not currently in use: the token is generated on the device and not transmitted to our servers, and reminders are scheduled locally on the device.</p>
 
   <h3>1.5. Account and sign-in</h3>
-  <p>At present, account sign-in (Google, Facebook, VKontakte) is <b>not implemented</b>, and account data is not collected. <span class="ph">[Update when cloud sync and sign-in are added in future versions: what account data is processed, where synced records are stored.]</span></p>
+  <p>At present, account sign-in (Google, Facebook, VKontakte) is <b>not implemented</b>, and account data is not collected.</p>
 
   <h3>1.6. Feedback (the “Feedback &amp; suggestions” form)</h3>
   <p>If you <b>choose to</b> send feedback through the form in the App, it is transmitted to the <b>Cloud Firestore (Google/Firebase)</b> cloud store. The following are sent:</p>
@@ -179,8 +174,8 @@
     <thead><tr><th>Data</th><th>Purpose</th><th>Legal basis</th></tr></thead>
     <tbody>
       <tr><td>Diary content (local)</td><td>Core function — keeping a personal emotion diary</td><td>Processed only by you, on your device</td></tr>
-      <tr><td>Usage analytics</td><td>Improving the App's stability and usability</td><td>Legitimate interest / consent <span class="ph">[clarify per jurisdiction]</span></td></tr>
-      <tr><td>Crash reports</td><td>Finding and fixing errors, App stability</td><td>Legitimate interest <span class="ph">[clarify per jurisdiction]</span></td></tr>
+      <tr><td>Usage analytics</td><td>Improving the App's stability and usability</td><td>Legitimate interest of the operator; data is anonymized</td></tr>
+      <tr><td>Crash reports</td><td>Finding and fixing errors, App stability</td><td>Legitimate interest of the operator; data is anonymized</td></tr>
       <tr><td>Push token</td><td>Delivering reminders and notifications</td><td>Legitimate interest / consent</td></tr>
       <tr><td>Feedback (feedback form)</td><td>Handling requests and improving the App</td><td>Consent — you submit feedback on your own initiative</td></tr>
     </tbody>
@@ -205,23 +200,23 @@
   <ul>
     <li><b>Diary content</b> is stored on the device until you delete it (deleting an individual record, clearing the App's data, or uninstalling the App). Once deleted, it cannot be recovered.</li>
     <li><b>Export/backup</b> lets you save your data to a file at your discretion; you are responsible for storing and protecting the exported file.</li>
-    <li><b>Feedback</b> you send through the feedback form is retained by us (in Cloud Firestore) for as long as needed to handle it and improve the App. To request deletion of a submitted piece of feedback, contact us: <span class="ph">[email]</span>.</li>
-    <li><b>Crash reports</b> are retained by Google for the period set for Firebase Crashlytics (<span class="ph">[verify the current period in the Firebase settings]</span>), after which they are deleted.</li>
-    <li><b>Analytics data</b> is retained by Google for a period defined by the Firebase settings (<span class="ph">[state the retention period]</span>).</li>
+    <li><b>Feedback</b> you send through the feedback form is retained by us (in Cloud Firestore) for as long as needed to handle it and improve the App. To request deletion of a submitted piece of feedback, contact us: <a href="mailto:septikusq@gmail.com">septikusq@gmail.com</a>.</li>
+    <li><b>Crash reports</b> are retained by Google for the period set for Firebase Crashlytics (90 days), after which they are deleted.</li>
+    <li><b>Analytics data</b> is retained by Google for a period defined by the Firebase settings (2 months).</li>
   </ul>
 
   <h2><span class="n">6</span>Your rights</h2>
-  <p>Depending on your jurisdiction (GDPR, Russian Federal Law No. 152-FZ, etc.), you may have the right to access, correct, delete your data, restrict processing and withdraw consent. Because diary content resides only with you, you manage it directly in the App. For questions regarding analytics, contact: <span class="ph">[email]</span>.</p>
-  <p><span class="ph">[If you target the EU/EEA — add the procedure for lodging a complaint with a supervisory authority. If Russia — reference rights under 152-FZ and the ability to withdraw consent.]</span></p>
+  <p>Under Russian Federal Law No. 152-FZ of 27 July 2006 “On Personal Data”, you have the right to obtain information about the processing of your data, to request that it be clarified, blocked or deleted, and to withdraw your consent to processing. Because diary content resides only with you, you manage it directly in the App. For questions about analytics, crash reports or feedback, contact: <a href="mailto:septikusq@gmail.com">septikusq@gmail.com</a>.</p>
+  <p>If you believe your rights have been violated, you may file a complaint with the authority responsible for protecting the rights of personal data subjects (Roskomnadzor) or with a court.</p>
 
   <h2><span class="n">7</span>Children's data</h2>
   <p>The App is not intended for children under 13 years of age and does not knowingly collect their data.</p>
 
   <h2><span class="n">8</span>Changes to this Policy</h2>
-  <p>We may update this Policy. Material changes will be reflected by the update date at the top of the document <span class="ph">[and, where necessary, by a notice in the App]</span>.</p>
+  <p>We may update this Policy. Material changes will be reflected by the update date at the top of the document.</p>
 
   <h2><span class="n">9</span>Contact</h2>
-  <p>For any questions about your data: <span class="ph">[email]</span>, <span class="ph">[postal address of the operator, if required]</span>.</p>
+  <p>For any questions about your data: <a href="mailto:septikusq@gmail.com">septikusq@gmail.com</a>.</p>
 
   <hr>
   <footer>EMO LINE · draft privacy policy · versioned in the project repository</footer>
